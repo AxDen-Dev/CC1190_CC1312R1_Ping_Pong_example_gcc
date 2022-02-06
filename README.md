@@ -20,6 +20,28 @@ Sub-G RF 통신으로 다른 카드와 데이터를 주고받는 예제를 학�
 총 2개의 어댑터 보드와 2개의 CC1190_CC1312 카드가 필요합니다.
 <br>
 <br>
+
+### 디바이스 작동
+Tx 펌웨어를 플래싱한 보드와, Rx 펌웨어를 플래싱한 보드에 각각 USB-C 5V 전원을 연결하면 10초 간격으로
+보드간 Ping-Pong 통신이 이루어 집니다. RF 통신이 이루어질 때 `LED4` 가 토글됩니다.
+<br>
+
+#### * 터미널 확인
+어댑터 보드가 PC와 연결되어 있다면 터미널을 통해 Ping-Pong 통신 확인이 가능합니다.
+screen 및 putty 등 시리얼 프로그램을 통해서 확인할 수 있으며, Baudrate 는 9600 입니다.
+
+<table>
+  <tr align="center">
+    <td><img src="./asset/rx_example.png"></td>
+    <td><img src="./asset/tx_example.png"></td>
+  </tr>
+  <tr align="center">
+    <td>RF rx example terminal</td>
+    <td>RF tx example terminal</td>
+  </tr>
+</table>
+<br>
+  
 ### Hardware 설정
 어댑터 보드에 CC1190_CC1312 카드를 장착 후, 아래와 같이 주변 컴포넌트를 조정합니다.
 
@@ -80,27 +102,6 @@ Sub-G RF 통신으로 다른 카드와 데이터를 주고받는 예제를 학�
 모든 설정이 완료되었으면 보드와 IDC 케이블 (1.27mm 10pin 2x5) 을 아래 사진과 같이 연결후
 CCS STUDIO 의 debug 아이콘을 눌러 펌웨어를 플래싱 합니다.
 <p align="center"><img src="./asset/idc_cable.png" width="600px"></p>
-<br>
-  
-### 디바이스 작동
-Tx 펌웨어를 플래싱한 보드와, Rx 펌웨어를 플래싱한 보드에 각각 USB-C 5V 전원을 연결하면 10초 간격으로
-보드간 Ping-Pong 통신이 이루어 집니다. RF 통신이 이루어질 때 `LED4` 가 토글됩니다.
-<br>
-
-#### * 터미널 확인
-어댑터 보드가 PC와 연결되어 있다면 터미널을 통해 Ping-Pong 통신 확인이 가능합니다.
-screen 및 putty 등 시리얼 프로그램을 통해서 확인할 수 있으며, Baudrate 는 9600 입니다.
-
-<table>
-  <tr align="center">
-    <td><img src="./asset/rx_example.png"></td>
-    <td><img src="./asset/tx_example.png"></td>
-  </tr>
-  <tr align="center">
-    <td>RF rx example terminal</td>
-    <td>RF tx example terminal</td>
-  </tr>
-</table>
 <br>
   
 ### Hardware 핀맵
